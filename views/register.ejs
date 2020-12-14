@@ -1,0 +1,27 @@
+<%- include('./layouts/header') %>
+
+<h1>Register</h1>
+<form action="/auth/register" method="post" class="lg-form">
+  <div>
+    <label for="email">Email/Username</label>
+    <input type="text" name="email" id="email" />
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password" />
+  </div>
+  <div>
+    <label for="password2">Confirm password</label>
+    <input type="password" name="password2" id="password2" />
+  </div>
+  <div>
+    <input type="submit" value="Register" />
+  </div>
+</form>
+<div>
+  <p>
+    Already have an account? <span><a href="/auth/login">Login</a></span>
+  </p>
+</div>
+<br />
+<%- include('./layouts/footer') %>
