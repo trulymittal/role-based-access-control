@@ -27,6 +27,7 @@ app.use(
   })
 );
 
+// Connect Flash
 app.use(connectFlash());
 app.use((req, res, next) => {
   res.locals.messages = req.flash();

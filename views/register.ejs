@@ -4,7 +4,12 @@
 <form action="/auth/register" method="post" class="lg-form">
   <div>
     <label for="email">Email/Username</label>
-    <input type="text" name="email" id="email" />
+    <input
+      type="text"
+      name="email"
+      id="email"
+      value="<%= locals.email ? email : '' %>"
+    />
   </div>
   <div>
     <label for="password">Password</label>
