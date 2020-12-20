@@ -69,6 +69,7 @@ router.post(
       const { email } = req.body;
       const doesExist = await User.findOne({ email });
       if (doesExist) {
+        req.flash('warning', 'Username/email already exists');
         res.redirect('/auth/register');
         return;
       }
